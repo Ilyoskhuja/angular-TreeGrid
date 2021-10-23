@@ -26,7 +26,20 @@ export class AppComponent {
         this.contextMenuItems= [
             {text: 'Collapse the Row', target: '.e-content', id: 'collapserow'},
             {text: 'Expand the Row', target: '.e-content', id: 'expandrow'},
-            { text: 'Collapse All3', target: '.e-headercontent', id: 'collapseall' },
+            { text: 'Style', target: '.e-headercontent', id: 'collapseall' },
+            
+            { text: 'New', target: '.e-headercontent', id: 'collapseall' },
+            
+            { text: 'Delete', target: '.e-headercontent', id: 'collapseall' },
+            
+            { text: 'Edit', target: '.e-headercontent', id: 'collapseall' },
+            
+            { text: 'Show', target: '.e-headercontent', id: 'collapseall' },
+            { text: 'Freeze', target: '.e-headercontent', id: 'collapseall' },
+            
+            { text: 'Filter', target: '.e-headercontent', id: 'collapseall' },
+            { text: 'Multi-Sort', target: '.e-headercontent', id: 'collapseall' },
+
             { text: 'Expand All', target: '.e-headercontent', id: 'expandall' }
          ];
          this.filterSettings = { type: 'FilterBar', hierarchyMode: 'Parent', mode: 'Immediate' };
