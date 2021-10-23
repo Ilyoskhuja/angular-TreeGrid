@@ -33,10 +33,6 @@ export class AppComponent {
       { text: 'Paste Sibling', target: '.e-content', id: 'rsibling' },
       { text: 'Paste Child', target: '.e-content', id: 'rchild' },
 
-
-
-
-
       { text: 'Style', target: '.e-headercontent', id: 'style' },
 
       { text: 'New', target: '.e-headercontent', id: 'new' },
@@ -50,7 +46,6 @@ export class AppComponent {
 
       { text: 'Filter', target: '.e-headercontent', id: 'filter' },
       { text: 'Multi-Sort', target: '.e-headercontent', id: 'multiSort' },
-
     ];
     this.filterSettings = {
       type: 'FilterBar',
@@ -113,33 +108,32 @@ export class AppComponent {
         document
           .querySelectorAll('li#rnew')[0]
           .setAttribute('style', 'display: block;');
-       
+
         document
           .querySelectorAll('li#rdelete')[0]
           .setAttribute('style', 'display: block;');
         document
           .querySelectorAll('li#redit')[0]
           .setAttribute('style', 'display: block;');
-       
+
         document
           .querySelectorAll('li#rmultiSelect')[0]
           .setAttribute('style', 'display: block;');
         document
           .querySelectorAll('li#rcopy')[0]
           .setAttribute('style', 'display: block;');
-       
+
         document
           .querySelectorAll('li#rcut')[0]
           .setAttribute('style', 'display: block;');
         document
           .querySelectorAll('li#rsibling')[0]
           .setAttribute('style', 'display: block;');
-       
+
         document
           .querySelectorAll('li#rchild')[0]
           .setAttribute('style', 'display: block;');
-   
-        }
+      }
     } else {
       let len =
         this.treegrid.element.querySelectorAll('.e-treegridexpand').length;
@@ -187,6 +181,8 @@ export class AppComponent {
       this.treegrid.collapseAll();
     } else if (args.item.id === 'expandall') {
       this.treegrid.expandAll();
+    } else if (args.item.id === 'rcopy') {
+      this.treegrid.copy(false);
     }
   }
 }
